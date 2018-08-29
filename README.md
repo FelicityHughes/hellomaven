@@ -1,4 +1,4 @@
-#HelloWorld Maven & Cucumber Demonstration
+# HelloWorld Maven & Cucumber Demonstration
 
 ## About
 This is a simple HelloWorld project that demonstrates how to set up a small
@@ -18,5 +18,7 @@ running Javadoc against the de-lomboked code.  If the default output directory
 is used for the `delombok` goal, your IDE may complain about duplicated classes.
 
 At the time of writing, the IntelliJ Cucumber plugin was not compatible with
-Cucumber 3.x.  Downgrading to version 2.x *might* help, depending on your
-version of IntelliJ.
+Cucumber 3.x.  In order to run Cucumber tests directly in IntelliJ, you must
+downgrade to version 2.x and ensure your run configuration contains the
+following program arguments:
+`--plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm2SMFormatter`.
